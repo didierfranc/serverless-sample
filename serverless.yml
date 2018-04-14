@@ -1,0 +1,23 @@
+service: test
+
+provider:
+  name: aws
+  runtime: nodejs8.10
+  stage: dev
+  region: eu-central-1
+  # vpc:
+  #   securityGroupIds:
+  #     - your-security-group-id
+  #   subnetIds:
+  #     - your-subnet-id
+
+functions:
+  hello:
+    handler: handler.hello
+    events:
+      - http:
+         path: /
+         method: get
+
+plugins:
+  - serverless-offline
