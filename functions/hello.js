@@ -1,6 +1,7 @@
 const getSecrets = require('../helpers/getSecrets')
 
 module.exports = async (event, context, callback) => {
+  // eslint-disable-next-line no-param-reassign
   context.callbackWaitsForEmptyEventLoop = false
 
   let response

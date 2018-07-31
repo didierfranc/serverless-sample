@@ -4,18 +4,20 @@
   "description": "",
   "main": "handler.js",
   "scripts": {
-    "dev":
-      "[ ! -e secrets.json ] && echo {} > secrets.json;dev=true sls offline start",
+    "dev": "[ ! -e secrets.json ] && echo {} > secrets.json;dev=true sls offline start",
     "deploy": "sls deploy"
   },
   "author": "",
   "license": "MIT",
   "dependencies": {
     "aws-sdk": "^2.224.1",
-    "ioredis": "^3.2.2",
     "serverless-offline": "^3.20.2"
   },
   "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "13.0.0",
+    "eslint-plugin-import": "^2.12.0",
+    "prettier": "^1.14.0",
     "serverless": "^1.26.1"
   }
 }
